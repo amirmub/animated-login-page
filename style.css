@@ -46,6 +46,9 @@ form{
 h1{
     color: var(--grad-clr1);
 }
+.create{
+    margin: 20px 0;
+}
 .social-container{
     margin: 20px 0px;
 }
@@ -70,7 +73,7 @@ span{
 input{
     width: 100%;
     padding: 12px 8px;
-    background: #f3f3f3;
+    background: #f0f0f0;
     border: none;
     outline: none;
 }
@@ -113,6 +116,7 @@ button{
 }
 .form-container button{
     margin-top: 17px;
+    cursor: pointer;
     transition: 80ms ease-in;
 }
 .form-container button:hover{
@@ -233,5 +237,74 @@ p{
     }
     100%{
         width: 143.67px;
+    }
+}
+/* media query*/
+@media (max-width : 768px) {
+    .container{
+        width: 450px;
+        height: 560px;
+    }
+    .overlay-container{
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 39%;
+        overflow: hidden;
+    }
+    .form-container {
+        top: 44%;
+        width: 100%;
+        height: 50%;
+        padding: 20px;
+    }
+    #overlayBtn{
+        cursor: pointer;
+        position: absolute;
+        left: 50%;
+        top: 75%;
+        transform: translateX(-50%);
+        width: 143.67px;
+        height: 40px;
+        border: 1px solid #fff;
+        background: transparent;
+        border-radius: 20px;
+    }
+     .form-container button {
+        margin-top: 0px;
+    }
+    form{
+        padding: 0 30px;
+    }
+    a{
+        margin: 8px 0;
+    }    
+    .overlay-right{
+        right: 5%;
+        transform: translateX(0%);  
+        padding: 10px;
+     }
+    .overlay-left{
+        right:68%;
+        transform: translateX(11%);
+    }
+    .right-panel-active .overlay {
+        transform: translateX(10%);
+    }
+     .right-panel-active .sign-up-container{
+        transform: translateX(1%);
+    }
+    
+    .right-panel-active .overlay-right{
+        transform: translateX(165%);
+    }
+    .overlay-left{
+        right: -38%;
+    }
+    .right-panel-active .overlay-container{
+        transform: translateX(0%);
+    }
+    .right-panel-active .overlay-left{
+        transform: translateX(-175%);
     }
 }
